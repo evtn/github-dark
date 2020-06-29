@@ -13,6 +13,10 @@ Dark theme for GitHub. Still in early development, has a lot of white spots.
 2. Open [style page](https://raw.githubusercontent.com/evtn/github-dark/master/gh.user.css) - Stylus (or whatever you've installed) should open the installation page
 3. Be happy with the theme or install [extra fonts](#extra-fonts)
 
+### beta branch
+You can install style from [beta branch](https://raw.githubusercontent.com/evtn/github-dark/beta/gh.user.css). It has the latest fixes and some experimenting on color scheme.
+Also it can contain issues (like some new color issues etc.)
+
 ## Features
 - Dark, clean style without extra shadows or borders
 - Syntax highlihting inspired by [ayu theme](https://github.com/dempfi/ayu)
