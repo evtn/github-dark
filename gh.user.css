@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Github Dark
 @namespace      evtn
-@version        0.0.3-beta002
+@version        0.0.3-beta003
 @description    Github DarkFlat
 @author         vk.com/qevitta
 @homepageURL    https://github.com/evtn/github-dark
@@ -225,7 +225,8 @@
     margin-top: 10px;
     border-radius: 5px;
   }
-  .pl-en {
+  .pl-en,
+  .pl-ent {
     color: #be71f0;
   }
   .pl-k {
