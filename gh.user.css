@@ -105,6 +105,7 @@
     background-color: var(--hover) !important;
     cursor: pointer;
   }
+  p,
   .text-gray-dark,
   .link-gray-dark,
   .table-list-header-toggle .btn-link.selected,
