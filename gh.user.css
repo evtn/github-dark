@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Github Dark
 @namespace      evtn
-@version        0.0.4-beta004
+@version        0.0.4-beta005
 @description    Github DarkFlat
 @author         vk.com/qevitta
 @homepageURL    https://github.com/evtn/github-dark
@@ -56,7 +56,8 @@
   .tabnav-tab[aria-selected="true"],
   .drag-and-drop,
   .select-menu-divider,
-  .select-menu-header {
+  .select-menu-header,
+  .SelectMenu-message {
     background-color: var(--content) !important;
   }
   .header-search-wrapper,
@@ -244,13 +245,15 @@
   .listgroup,
   .SelectMenu-filter,
   .SelectMenu-footer,
-  .border {
+  .border,
+  .SelectMenu-message {
     border: none !important;
   }
   .btn,
   .UnderlineNav,
   .social-count,
-  .SelectMenu-tabs {
+  .SelectMenu-tabs,
+  .SelectMenu-tab {
     box-shadow: none;
   }
   .dropdown-menu::before,
@@ -744,7 +747,7 @@
   }
   .SelectMenu-tab {
     border: none !important;
-    border-bottom: 2px solid transparent !important;
+    border-bottom: 2px solid transparent;
     color: var(--text) !important;
     background-color: var(--content) !important;
   }
