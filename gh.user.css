@@ -1,11 +1,11 @@
 /* ==UserStyle==
 @name           Github Dark
 @namespace      evtn
-@version        0.0.2
+@version        0.0.3-beta003
 @description    Github DarkFlat
 @author         vk.com/qevitta
 @homepageURL    https://github.com/evtn/github-dark
-@updateURL      https://raw.githubusercontent.com/evtn/github-dark/master/gh.user.css
+@updateURL      https://raw.githubusercontent.com/evtn/github-dark/beta/gh.user.css
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://github.com") {
@@ -49,7 +49,10 @@
   .markdown-body img,
   .State--purple,
   .State--red,
-  .State--green {
+  .State--green,
+  main > *,
+  .tabnav-tab.selected, .tabnav-tab[aria-current]:not([aria-current="false"]), 
+  .tabnav-tab[aria-selected="true"] {
     background-color: var(--content) !important;
   }
   .header-search-wrapper,
@@ -70,7 +73,8 @@
   .ajax-pagination-form .ajax-pagination-btn,
   .ajax-pagination-form .ajax-pagination-btn:focus,
   .ajax-pagination-form .ajax-pagination-btn:hover,
-  .bg-gray {
+  .bg-gray,
+  .menu {
     background-color: var(--hover) !important;
   }
   .link-gray,
@@ -80,9 +84,16 @@
   .commit-message .issue-link,
   .gh-header-meta,
   .timeline-comment-header,
-  .timeline-comment {
+  .timeline-comment,
+  .tabnav-tab {
     color: var(--gray) !important;
   }
+  .Box-header,
+  .markdown-body .highlight pre,
+  .markdown-body pre,
+  .dropdown-item:focus,
+  .dropdown-item:hover,
+  .menu-item:focus, .menu-item:hover,
   .markdown-body table tr:nth-child(2n) {
     background-color: var(--darker);
   }
@@ -94,12 +105,15 @@
     background-color: var(--hover) !important;
     cursor: pointer;
   }
+  p,
   .text-gray-dark,
   .link-gray-dark,
   .table-list-header-toggle .btn-link.selected,
   .table-list-header-toggle .btn-link.selected:hover,
   .dropdown-item,
-  .subnav-item {
+  .subnav-item,
+  .menu-heading,
+  .menu-item {
     color: var(--text) !important;
   }
   body,
@@ -168,6 +182,11 @@
   .discussion-sidebar-item + .discussion-sidebar-item,
   .profile-rollup-wrapper + .profile-rollup-wrapper,
   .profile-rollup-summarized + .profile-rollup-summarized,
+  .menu,
+  .menu-heading,
+  .menu-item,
+  .Subhead,
+  .tabnav,
   .border {
     border: none !important;
   }
@@ -206,7 +225,8 @@
     margin-top: 10px;
     border-radius: 5px;
   }
-  .pl-en {
+  .pl-en,
+  .pl-ent {
     color: #be71f0;
   }
   .pl-k {
@@ -228,13 +248,6 @@
   }
   .pl-c {
     color: #626a73
-  }
-  .Box-header,
-  .markdown-body .highlight pre,
-  .markdown-body pre,
-  .dropdown-item:focus,
-  .dropdown-item:hover {
-    background: var(--darker);
   }
   .btn.disabled, .btn:disabled, 
   .btn[aria-disabled="true"],
@@ -580,5 +593,55 @@
   }
   input:hover {
     box-shadow: var(--shadow);
+  }
+  .menu-item.selected::before, .menu-item[aria-current]:not([aria-current="false"])::before, .menu-item[aria-selected="true"]::before {
+    top: calc(50% - 4px - 1px);
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent);
+    margin-left: 5px;
+    border-radius: 50%;
+  }
+  .btn-mktg {
+    background: var(--accent);
+    color: var(--text);
+  }
+  .btn-mktg:hover {
+    background: var(--accent-hover);
+    color: var(--text);
+  }
+  .position-absolute.text-center {
+    background: linear-gradient(to top, var(--content), transparent) !important;
+  }
+  a.d-block + .p-3 {
+    margin-top: -10px;
+  }
+  .p-3:not(.js-skip-to-content) {
+    background: var(--content);
+    position: relative;
+    z-index: 10;
+    border-radius: 10px;
+  }
+  article.rounded-1 {
+    border-radius: 10px !important;
+    overflow: hidden;
+  }
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+    color: var(--text);
+    font-weight: 500;
+  }
+  h1 a:hover,
+  h2 a:hover,
+  h3 a:hover,
+  h4 a:hover,
+  h5 a:hover,
+  h6 a:hover {
+    color: var(--gray);
+    font-weight: 500;
   }
 }
