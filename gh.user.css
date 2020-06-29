@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Github Dark
 @namespace      evtn
-@version        0.0.4-beta002
+@version        0.0.4-beta003
 @description    Github DarkFlat
 @author         vk.com/qevitta
 @homepageURL    https://github.com/evtn/github-dark
@@ -54,7 +54,9 @@
   main > *,
   .tabnav-tab.selected, .tabnav-tab[aria-current]:not([aria-current="false"]), 
   .tabnav-tab[aria-selected="true"],
-  .drag-and-drop {
+  .drag-and-drop,
+  .select-menu-divider,
+  .select-menu-header {
     background-color: var(--content) !important;
   }
   .header-search-wrapper,
@@ -80,6 +82,28 @@
   .form-group .form-control,
   .form-actions .bg-gray-light {
     background-color: var(--hover) !important;
+  }
+  .select-menu-item.navigation-focus,
+  .select-menu-item.navigation-focus .description-inline,
+  .select-menu-item.navigation-focus.select-menu-action,
+  .select-menu-item.navigation-focus.selected,
+  .select-menu-item.navigation-focus[aria-checked="true"],
+  .select-menu-item:focus,
+  .select-menu-item:focus .description-inline,
+  .select-menu-item:focus.select-menu-action,
+  .select-menu-item:focus.selected,
+  .select-menu-item:hover,
+  .select-menu-item:hover .description-inline,
+  .select-menu-item:hover.select-menu-action,
+  .select-menu-item:hover.selected,
+  .select-menu-item[aria-checked="true"]:focus,
+  .select-menu-item[aria-checked="true"]:hover,
+  .select-menu-item[aria-selected="true"] .description-inline,
+  .select-menu-item[aria-selected="true"].select-menu-action,
+  .select-menu-item[aria-selected="true"]:focus,
+  .select-menu-item[aria-selected="true"]:hover,
+  [open] > .btn {
+    background: var(--hover);
   }
   .link-gray,
   .text-gray,
@@ -124,7 +148,9 @@
   .header-nav-current-user .user-profile-link,
   .toolbar-item .octicon,
   .session-authentication .auth-form-header,
-  .session-authentication .header-logo {
+  .session-authentication .header-logo,
+  .select-menu-divider,
+  .select-menu-header .select-menu-title {
     color: var(--text) !important;
   }
   body,
@@ -148,7 +174,7 @@
   }
   a:hover,
   .btn.hover, .btn:hover {
-    color: var(--accent-hover) !important;
+    /*color: var(--accent-hover) !important;*/
     text-decoration: none;
   }
   .btn {
@@ -205,6 +231,13 @@
   .drag-and-drop,
   .auth-form-body,
   .session-authentication .auth-form-body,
+  .flash-warn,
+  .select-menu-item,
+  .select-menu-text-filter:first-child:last-child,
+  .select-menu-text-filter input,
+  .select-menu-divider,
+  .select-menu-header,
+  .listgroup,
   .border {
     border: none !important;
   }
@@ -550,9 +583,8 @@
     background-color: var(--content);
     border-top: 2px solid var(--hover);
   }
-  .State--red,
   .bg-red {
-    background-color: var(--red) !important;
+    background-color: var(--red);
   }
   .bg-green {
     background-color: var(--green) !important;
@@ -573,7 +605,7 @@
     box-shadow: var(--shadow) !important;
   }
   .flash-warn {
-    color: var(--green);
+    color: var(--text);
     background-color: var(--hover);
   }
   .user-status-circle-badge {
@@ -612,13 +644,18 @@
   input:hover {
     box-shadow: var(--shadow);
   }
-  .menu-item.selected::before, .menu-item[aria-current]:not([aria-current="false"])::before, .menu-item[aria-selected="true"]::before {
+  .menu-item.selected::before,
+  .menu-item[aria-current]:not([aria-current="false"])::before,
+  .menu-item[aria-selected="true"]::before {
     top: calc(50% - 4px - 1px);
     width: 8px;
     height: 8px;
     background-color: var(--accent);
-    margin-left: 5px;
+    margin-left: 8px;
     border-radius: 50%;
+  }
+  .menu-item {
+    padding-left: 20px;
   }
   .btn-mktg {
     background: var(--accent);
@@ -687,5 +724,15 @@
   .form-select.focus,
   .form-select:focus {
     box-shadow: var(--strong-shadow);
+  }
+  .btn-danger {
+    background: var(--red) !important;
+  }
+  .btn-danger:hover {
+    background: var(--red-hover) !important;
+    color: var(--text) !important;
+  }
+  .flash-warn .octicon {
+    color: var(--text);
   }
 }
