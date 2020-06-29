@@ -1,0 +1,584 @@
+/* ==UserStyle==
+@name           Github Dark
+@namespace      evtn
+@version        0.0.2
+@description    Github DarkFlat
+@author         vk.com/qevitta
+@homepageURL    https://github.com/evtn/github-dark
+@updateURL      https://raw.githubusercontent.com/evtn/github-dark/master/gh.user.css
+==/UserStyle== */
+
+@-moz-document url-prefix("https://github.com") {
+  :root {
+    --red: #cd2431;
+    --green: #29ab47;
+    --purple: #6f42c1;
+    --blue: #0366d7;
+    --content: #0f1216;
+    --hover: #1a2027;
+    --darker: #0a0e14;
+    --red-hover: #b7202c;
+    --green-hover: #24983f;
+    --purple-hover: #653ab2;
+    --blue-hover: #035bbf;
+    --text: #e6e6e6;
+    --gray: #b6b6b6;
+    --accent: var(--blue);
+    --accent-hover: var(--blue-hover);
+    --shadow: 0 8px 24px var(--darker);
+    --activity: var(--green);
+  }
+  body,
+  .markdown-body {
+    font-family: -apple-system,BlinkMacSystemFont,Quarion,Inter,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  }
+  .Header,
+  body,
+  .bg-gray-light,
+  .Box-header--blue,
+  table.files,
+  .Box,
+  .bg-blue-light,
+  .bg-white,
+  .markdown-body table tr,
+  .SelectMenu-modal,
+  .SelectMenu-list,
+  .SelectMenu-divider,
+  .discussion-timeline-actions,
+  .gh-header,
+  .markdown-body img,
+  .State--purple,
+  .State--red,
+  .State--green {
+    background-color: var(--content) !important;
+  }
+  .header-search-wrapper,
+  .social-count,
+  .social-count:hover,
+  .blob-code-inner.highlighted,
+  .blob-code-inner .highlighted,
+  .subnav-item:focus,
+  .subnav-item:hover,
+  .subnav-item,
+  .SelectMenu-item:hover,
+  body:not(.intent-mouse) .SelectMenu-item:focus,
+  .timeline-comment-header,
+  .timeline-comment,
+  .TimelineItem::before,
+  .progress-bar,
+  .page-responsive .previewable-comment-form .comment-form-head.tabnav,
+  .ajax-pagination-form .ajax-pagination-btn,
+  .ajax-pagination-form .ajax-pagination-btn:focus,
+  .ajax-pagination-form .ajax-pagination-btn:hover,
+  .bg-gray {
+    background-color: var(--hover) !important;
+  }
+  .link-gray,
+  .text-gray,
+  .table-list-header-toggle .btn-link,
+  .SelectMenu-item,
+  .commit-message .issue-link,
+  .gh-header-meta,
+  .timeline-comment-header,
+  .timeline-comment {
+    color: var(--gray) !important;
+  }
+  .markdown-body table tr:nth-child(2n) {
+    background-color: var(--darker);
+  }
+  table.files tr.navigation-focus td {
+    background-color: var(--content);
+  }
+  table.files tr:hover td, 
+  table.files tr[aria-selected="true"] td {
+    background-color: var(--hover) !important;
+    cursor: pointer;
+  }
+  .text-gray-dark,
+  .link-gray-dark,
+  .table-list-header-toggle .btn-link.selected,
+  .table-list-header-toggle .btn-link.selected:hover,
+  .dropdown-item,
+  .subnav-item {
+    color: var(--text) !important;
+  }
+  body,
+  .social-count,
+  .btn:not(.btn-primary) {
+    color: var(--text);
+  }
+  a,
+  .social-count:hover,
+  .team-mention,
+  .user-mention,
+  .UnderlineNav-item .octicon-repo,
+  .repohead h1 .octicon,
+  .UnderlineNav-item .octicon-project,
+  .UnderlineNav-item .octicon-book {
+    color: var(--accent);
+  }
+  .btn, 
+  .btn-primary {
+    background-image: none !important;
+  }
+  a:hover,
+  .btn.hover, .btn:hover {
+    color: var(--accent-hover) !important;
+    text-decoration: none;
+  }
+  .btn {
+    background-color: var(--hover);
+  }
+  .btn-primary {
+    color: var(--text);
+    background-color: var(--green);
+  }
+  .btn-primary.hover, .btn-primary:hover {
+    background-color: var(--green-hover) !important;
+    color: var(--text) !important;
+  }
+  .overall-summary,
+  .Box-header--blue,
+  .btn-primary,
+  .btn,
+  table.files td,
+  .social-count,
+  .pagehead,
+  .Box,
+  .bg-blue-light,
+  .repository-lang-stats-graph,
+  .Box-body,
+  .codesearch-results .repo-list-item + .repo-list-item,
+  .border-gray-dark,
+  .border-top,
+  .border-bottom,
+  .markdown-body table tr,
+  .BorderGrid-cell,
+  .border-gray-light,
+  .Box-row,
+  .subnav-item,
+  .SelectMenu-divider,
+  .SelectMenu-header,
+  .timeline-comment-wrapper,
+  .discussion-timeline-actions,
+  .timeline-comment,
+  .timeline-comment-header,
+  .gh-header-meta,
+  .reaction-summary-item,
+  .discussion-sidebar-item + .discussion-sidebar-item,
+  .profile-rollup-wrapper + .profile-rollup-wrapper,
+  .profile-rollup-summarized + .profile-rollup-summarized,
+  .border {
+    border: none !important;
+  }
+  .btn,
+  .UnderlineNav,
+  .social-count {
+    box-shadow: none;
+  }
+  .dropdown-menu::before,
+  .page-responsive .timeline-comment--caret::after,
+  .page-responsive .timeline-comment--caret::before {
+    display: none;
+  }
+  .commit-tease-sha {
+    color: var(--green);
+    font-size: 13px;
+  }
+  .commit-tease-sha:hover {
+    color: var(--green-hover);
+  }
+  .Box-header {
+    border-radius: 3px;
+    border: none;
+    color: var(--text);
+  }
+  pre,
+  code,
+  .blob-code-inner {
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .blob-wrapper {
+    padding-top: 10px !important;
+    background: var(--darker);
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  .pl-en {
+    color: #be71f0;
+  }
+  .pl-k {
+    color: #ff8f40;
+  }
+  .pl-s,
+  .pl-pds,
+  .pl-s .pl-pse .pl-s1,
+  .pl-sr, .pl-sr .pl-cce,
+  .pl-sr .pl-sra,
+  .pl-sr .pl-sre {
+    color: #c2d94c;
+  }
+  .pl-v {
+    color: #ffb454;
+  }
+  .pl-c1 {
+    color: #f29668
+  }
+  .pl-c {
+    color: #626a73
+  }
+  .Box-header,
+  .markdown-body .highlight pre,
+  .markdown-body pre,
+  .dropdown-item:focus,
+  .dropdown-item:hover {
+    background: var(--darker);
+  }
+  .btn.disabled, .btn:disabled, 
+  .btn[aria-disabled="true"],
+  .btn.disabled:hover {
+    background: var(--content) !important;
+    color: var(--text) !important;
+  }
+  .blob-num {
+    color: var(--text);
+    opacity: 0.6;
+    font-family: Fira Code;
+    font-size: 13px;
+  }
+  .blob-num:hover {
+    color: var(--text);
+    opacity: 1;
+  }
+  .btn-octicon {
+    background: var(--hover) !important;
+    color: white;
+    border-radius: 10px;
+  }
+  .repository-lang-stats-graph {
+    border-radius: 0 !important;
+    margin-top: 2px;
+  }
+  .repository-lang-stats-graph .language-color:last-child,
+  .repository-lang-stats-graph .language-color:first-child {
+    border-radius: 0 !important;
+  }
+  .topic-tag {
+    background-color: var(--hover);
+    border-radius: 3px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .reponav-item.selected {
+    border: 2px solid transparent;
+    border-bottom-color: var(--accent);
+    background-color: var(--content);
+    color: var(--accent);
+  }
+  .repository-lang-stats-graph .language-color:not(:first-child) {
+    border-left: 3px solid var(--content);
+  }
+  table.files td.icon .octicon {
+    color: var(--accent);
+  }
+  .link-gray,
+  table.files td.age,
+  .commit-tease {
+    color: var(--text);
+    opacity: 0.8;
+  }
+  .markdown-body blockquote {
+    padding: 0 8px;
+    color: var(--text);
+    border-left: 2px solid var(--gray);
+    opacity: 0.8;
+  }
+  .markdown-body h1, .markdown-body h2 {
+    border-bottom: 3px solid var(--hover);
+  }
+  ul {
+    color: var(--text);
+  }
+  ul a,
+  ul a:hover {
+    color: var(--accent);
+  }
+  code,
+  .protip code
+  .markdown-body code,
+  .markdown-body tt {
+    font-family: Fira Code;
+    background-color: var(--darker);
+    border-radius: 3px;
+    color: inherit;
+    font-size: 100%;
+  }
+  .Box-row--focus-gray.navigation-focus {
+    background-color: var(--hover);
+  }
+  .markdown-body del {
+    text-decoration: line-through;
+    opacity: 0.5;
+    color: var(--text);
+  }
+  .markdown-body del:hover {
+    text-decoration: none;
+    opacity: 1;
+    color: var(--text);
+  }
+  .color-blue-3 {
+    color: var(--blue) !important;
+  }
+  .markdown-body img {
+    border-radius: 10px;
+  }
+  .markdown-body table td, .markdown-body table th {
+    border: 2px solid var(--hover);
+  }
+  .box-shadow-large,
+  .timeline-comment {
+    box-shadow: var(--shadow) !important;
+  }
+  .Popover-message--bottom-left::before, .Popover-message--bottom-right::before, .Popover-message--bottom::before {
+    border-top-color: var(--content);
+  }
+  .btn-sm,
+  .btn-sm:hover {
+    background: var(--hover) !important;
+  }
+  .icon-sponsor, .icon-sponsoring {
+    color: var(--purple);
+  }
+  .avatar {
+    border-radius: 50%;
+  }
+  .hx_flex-avatar-stack-item .avatar {
+    border: 2px solid var(--content);
+    background-color: var(--content);
+  }
+  .text-gray-light {
+    color: var(--gray) !important;
+  }
+  .UnderlineNav-item:focus, 
+  .UnderlineNav-item:hover,
+  .UnderlineNav-item.selected,
+  .UnderlineNav-item[aria-current]:not([aria-current="false"]),
+  .UnderlineNav-item[role="tab"][aria-selected="true"] {
+    border-bottom-color: var(--accent);
+  }
+  .UnderlineNav-item.selected .Counter,
+  .profile-timeline.discussion-timeline::before {
+    background-color: var(--accent);
+  }
+  .UnderlineNav-item.selected span,
+  .UnderlineNav-item.selected .octicon,
+  .UnderlineNav-item[aria-current]:not([aria-current="false"]) span,
+  .UnderlineNav-item[aria-current]:not([aria-current="false"]) .octicon,
+  .UnderlineNav-item[role="tab"][aria-selected="true"] span, 
+  .UnderlineNav-item[role="tab"][aria-selected="true"] .octicon {
+    color: var(--accent);
+  }
+  .Counter {
+    background-color: var(--gray);
+    color: var(--content) !important;
+  }
+  .UnderlineNav-item[data-tab-item="code-tab"]:focus, 
+  .UnderlineNav-item[data-tab-item="code-tab"]:hover,
+  .UnderlineNav-item.selected[data-tab-item="code-tab"],
+  .UnderlineNav-item[aria-current][data-tab-item="code-tab"]:not([aria-current="false"]),
+  .UnderlineNav-item[role="tab"][aria-selected="true"][data-tab-item="code-tab"] {
+    border-bottom-color: var(--red) !important;
+  }
+  .UnderlineNav-item.selected[data-tab-item="code-tab"] .Counter {
+    background-color: var(--red);
+  }
+  .UnderlineNav-item.selected span[data-content="Code"],
+  .UnderlineNav-item.selected .octicon-code,
+  .UnderlineNav-item[aria-current]:not([aria-current="false"]) span[data-content="Code"],
+  .UnderlineNav-item[aria-current]:not([aria-current="false"]) .octicon-code,
+  .UnderlineNav-item[role="tab"][aria-selected="true"] span[data-content="Code"], 
+  .UnderlineNav-item[role="tab"][aria-selected="true"] .octicon-code {
+    color: var(--red) !important;
+  }
+  .UnderlineNav-item[data-tab-item="issues-tab"]:focus, 
+  .UnderlineNav-item[data-tab-item="issues-tab"]:hover,
+  .UnderlineNav-item.selected[data-tab-item="issues-tab"],
+  .UnderlineNav-item[aria-current][data-tab-item="issues-tab"]:not([aria-current="false"]),
+  .UnderlineNav-item[role="tab"][aria-selected="true"][data-tab-item="issues-tab"] {
+    border-bottom-color: var(--green) !important;
+  }
+  .UnderlineNav-item.selected[data-tab-item="issues-tab"] .Counter,
+  .State--green,
+  .progress {
+    background-color: var(--green);
+  }
+  .UnderlineNav-item.selected span[data-content="Issues"],
+  .UnderlineNav-item.selected .octicon-issue-opened,
+  .UnderlineNav-item[aria-current]:not([aria-current="false"]) span[data-content="Issues"],
+  .UnderlineNav-item[aria-current]:not([aria-current="false"]) .octicon-issue-opened,
+  .UnderlineNav-item[role="tab"][aria-selected="true"] span[data-content="Issues"], 
+  .UnderlineNav-item[role="tab"][aria-selected="true"] .octicon-issue-opened {
+    color: var(--green) !important;
+  }
+  .UnderlineNav-item[data-tab-item="pull-requests-tab"]:focus, 
+  .UnderlineNav-item[data-tab-item="pull-requests-tab"]:hover,
+  .UnderlineNav-item.selected[data-tab-item="pull-requests-tab"],
+  .UnderlineNav-item[aria-current][data-tab-item="pull-requests-tab"]:not([aria-current="false"]),
+  .UnderlineNav-item[role="tab"][aria-selected="true"][data-tab-item="pull-requests-tab"] {
+    border-bottom-color: var(--purple) !important;
+  }
+  .UnderlineNav-item.selected[data-tab-item="pull-requests-tab"] .Counter {
+    background-color: var(--purple);
+  }
+  .UnderlineNav-item.selected span[data-content="Pull requests"],
+  .UnderlineNav-item.selected .octicon-git-pull-request,
+  .UnderlineNav-item[aria-current]:not([aria-current="false"]) span[data-content="Pull requests"],
+  .UnderlineNav-item[aria-current]:not([aria-current="false"]) .octicon-git-pull-request,
+  .UnderlineNav-item[role="tab"][aria-selected="true"] span[data-content="Pull requests"], 
+  .UnderlineNav-item[role="tab"][aria-selected="true"] .octicon-git-pull-request {
+    color: var(--purple) !important;
+  }
+  .UnderlineNav-item,
+  a.UnderlineNav-item {
+    color: var(--text) !important;
+  }
+  .hx_avatar_stack_commit .AvatarStack-body {
+    background-color: transparent;
+  }
+  .input-contrast {
+    background-color: var(--hover);
+    border: none;
+    box-shadow: none;
+  }
+  .dropdown-menu {
+    background-color: var(--hover);
+    border: none;
+    box-shadow: var(--shadow);
+  }
+  .subnav-links .Counter {
+    background-color: transparent;
+    color: var(--text) !important;
+  }
+  .subnav-item {
+    border-radius: 6px;
+  }
+  .subnav-item:first-child {
+    margin-right: 10px;
+  }
+  .SelectMenu-modal {
+    border: none;
+    box-shadow: var(--shadow);
+  }
+  .SelectMenu-item {
+    width: unset;
+    background-color: var(--content);
+    border-bottom: none;
+    margin: 0 5px;
+    border-radius: 5px;
+  }
+  .reaction-sort-item {
+    opacity: 1;
+  }
+  .ellipsis-expander:hover,
+  .hidden-text-expander a:hover {
+    background-color: var(--hover);
+    color: var(--text);
+  }
+  .rule,
+  hr {
+    border-bottom: 2px solid var(--hover);
+  }
+  .btn.hover,
+  .btn:hover {
+    background-color: var(--hover);
+    box-shadow: var(--shadow);
+  }
+  .timeline-comment-label {
+    border: none;
+    background-color: var(--green);
+    color: var(--content);
+  }
+  .TimelineItem-badge {
+    color: var(--accent);
+    background-color: var(--hover);
+  }
+  .thread-subscription-status {
+    color: var(--gray);
+    background-color: var(--content);
+  }
+  .table-list-header {
+    background-color: var(--hover);
+    border: none;
+  }
+  .TimelineItem-badge {
+    border-color: var(--darker);
+  }
+  .TimelineItem-break {
+    background-color: var(--content);
+    border-top: 2px solid var(--hover);
+  }
+  .State--red,
+  .bg-red {
+    background-color: var(--red) !important;
+  }
+  .bg-green {
+    background-color: var(--green) !important;
+  }
+  .TimelineItem-badge.bg-red,
+  .TimelineItem-badge.bg-red .octicon {
+    background-color: var(--hover) !important;
+    color: var(--red);
+  }
+  .TimelineItem-badge.bg-green,
+  .TimelineItem-badge.bg-green .octicon {
+    background-color: var(--hover) !important;
+    color: var(--green);
+  }
+  .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow {
+    background-color: var(--content);
+    border-bottom: none;
+    box-shadow: var(--shadow) !important;
+  }
+  .flash-warn {
+    color: var(--green);
+    background-color: var(--hover);
+  }
+  .user-status-circle-badge {
+    background-color: var(--content);
+    border: none;
+    border-radius: 2em;
+    box-shadow: none;
+  }
+  .user-status-circle-badge-container:hover .user-status-circle-badge {
+    box-shadow: var(--shadow);
+  }
+  .discussion-item-icon {
+    border-color: var(--darker);
+    color: var(--content);
+    background-color: var(--accent);
+  }
+  .State--purple {
+    color: var(--purple) !important;
+  }
+  .State--red,
+  .text-red {
+    color: var(--red) !important;
+  }
+  .SelectMenu-item[aria-checked="true"],
+  .text-green,
+  .State--green {
+    color: var(--green) !important;
+  }
+  .form-control, 
+  .form-select {
+    color: var(--text);
+    background-color: var(--hover);
+    border: none;
+    box-shadow: none;
+  }
+  input:hover {
+    box-shadow: var(--shadow);
+  }
+}
