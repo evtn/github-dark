@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Github Dark
 @namespace      evtn
-@version        0.0.4-beta001
+@version        0.0.4-beta002
 @description    Github DarkFlat
 @author         vk.com/qevitta
 @homepageURL    https://github.com/evtn/github-dark
@@ -26,6 +26,7 @@
     --accent: var(--blue);
     --accent-hover: var(--blue-hover);
     --shadow: 0 8px 24px var(--darker);
+    --strong-shadow: 0 0 50px #000a;
     --activity: var(--green);
   }
   body,
@@ -52,7 +53,8 @@
   .State--green,
   main > *,
   .tabnav-tab.selected, .tabnav-tab[aria-current]:not([aria-current="false"]), 
-  .tabnav-tab[aria-selected="true"] {
+  .tabnav-tab[aria-selected="true"],
+  .drag-and-drop {
     background-color: var(--content) !important;
   }
   .header-search-wrapper,
@@ -74,7 +76,9 @@
   .ajax-pagination-form .ajax-pagination-btn:focus,
   .ajax-pagination-form .ajax-pagination-btn:hover,
   .bg-gray,
-  .menu {
+  .menu,
+  .form-group .form-control,
+  .form-actions .bg-gray-light {
     background-color: var(--hover) !important;
   }
   .link-gray,
@@ -85,7 +89,8 @@
   .gh-header-meta,
   .timeline-comment-header,
   .timeline-comment,
-  .tabnav-tab {
+  .tabnav-tab,
+  .session-device {
     color: var(--gray) !important;
   }
   .Box-header,
@@ -94,7 +99,9 @@
   .dropdown-item:focus,
   .dropdown-item:hover,
   .menu-item:focus, .menu-item:hover,
-  .markdown-body table tr:nth-child(2n) {
+  .markdown-body table tr:nth-child(2n),
+  .input-contrast:focus,
+  .auth-form-body {
     background-color: var(--darker);
   }
   table.files tr.navigation-focus td {
@@ -113,7 +120,11 @@
   .dropdown-item,
   .subnav-item,
   .menu-heading,
-  .menu-item {
+  .menu-item,
+  .header-nav-current-user .user-profile-link,
+  .toolbar-item .octicon,
+  .session-authentication .auth-form-header,
+  .session-authentication .header-logo {
     color: var(--text) !important;
   }
   body,
@@ -187,6 +198,13 @@
   .menu-item,
   .Subhead,
   .tabnav,
+  .dropdown-divider,
+  .tabnav-tab.selected,
+  .tabnav-tab[aria-current]:not([aria-current="false"]),
+  .tabnav-tab[aria-selected="true"],
+  .drag-and-drop,
+  .auth-form-body,
+  .session-authentication .auth-form-body,
   .border {
     border: none !important;
   }
@@ -652,5 +670,22 @@
     border: none;
     color: var(--text);
     font-weight: 600;
+  }
+  .form-group .form-control[disabled],
+  .form-group .form-select[disabled] {
+    background-color: var(--hover);
+    opacity: 0.5;
+  }
+  .form-actions .btn {
+    margin: 5px 5px 10px 5px !important;
+  }
+  .session-authentication .auth-form-header h1 {
+    font-weight: 400;
+  }
+  .form-control.focus,
+  .form-control:focus,
+  .form-select.focus,
+  .form-select:focus {
+    box-shadow: var(--strong-shadow);
   }
 }
