@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Github Dark
 @namespace      evtn
-@version        0.0.4-beta003
+@version        0.0.4-beta004
 @description    Github DarkFlat
 @author         vk.com/qevitta
 @homepageURL    https://github.com/evtn/github-dark
@@ -80,7 +80,9 @@
   .bg-gray,
   .menu,
   .form-group .form-control,
-  .form-actions .bg-gray-light {
+  .form-actions .bg-gray-light,
+  .ellipsis-expander,
+  .hidden-text-expander a {
     background-color: var(--hover) !important;
   }
   .select-menu-item.navigation-focus,
@@ -150,7 +152,9 @@
   .session-authentication .auth-form-header,
   .session-authentication .header-logo,
   .select-menu-divider,
-  .select-menu-header .select-menu-title {
+  .select-menu-header .select-menu-title,
+  .ellipsis-expander,
+  .hidden-text-expander a {
     color: var(--text) !important;
   }
   body,
@@ -238,12 +242,15 @@
   .select-menu-divider,
   .select-menu-header,
   .listgroup,
+  .SelectMenu-filter,
+  .SelectMenu-footer,
   .border {
     border: none !important;
   }
   .btn,
   .UnderlineNav,
-  .social-count {
+  .social-count,
+  .SelectMenu-tabs {
     box-shadow: none;
   }
   .dropdown-menu::before,
@@ -734,5 +741,14 @@
   }
   .flash-warn .octicon {
     color: var(--text);
+  }
+  .SelectMenu-tab {
+    border: none !important;
+    border-bottom: 2px solid transparent !important;
+    color: var(--text) !important;
+    background-color: var(--content) !important;
+  }
+  .SelectMenu-tab[aria-selected="true"] {
+    border-color: var(--accent);
   }
 }
