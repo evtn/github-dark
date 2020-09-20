@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Github Dark
 @namespace      evtn
-@version        0.0.4-beta007
+@version        0.0.4-beta008
 @description    Github DarkFlat
 @author         vk.com/qevitta
 @homepageURL    https://github.com/evtn/github-dark
@@ -119,6 +119,9 @@
   .session-device {
     color: var(--gray) !important;
   }
+  .subnav-link {
+    color: var(--gray);
+  }
   .Box-header,
   .markdown-body .highlight pre,
   .markdown-body pre,
@@ -160,7 +163,8 @@
   }
   body,
   .social-count,
-  .btn:not(.btn-primary) {
+  .btn:not(.btn-primary),
+  .subnav-link:hover {
     color: var(--text);
   }
   a,
@@ -170,8 +174,15 @@
   .UnderlineNav-item .octicon-repo,
   .repohead h1 .octicon,
   .UnderlineNav-item .octicon-project,
-  .UnderlineNav-item .octicon-book {
+  .UnderlineNav-item .octicon-book,
+  .subnav-link.selected {
     color: var(--accent);
+  }
+  .subnav-link.selected {
+    border-bottom-color: var(--accent);
+  }
+  .subnav-link:hover {
+    border-bottom-color: var(--text);
   }
   .btn, 
   .btn-primary {
@@ -690,10 +701,10 @@
   article.rounded-1 {
     border-radius: 10px !important;
     overflow: hidden;
-    background-color: var(--hover) !important;
+    background-color: var(--content) !important;
   }
   article.bg-white {
-    background-color: var(--hover) !important;
+    background-color: var(--content) !important;
   }
   article > .p-3:last-child {
     border-radius: 0 0 10px 10px;
