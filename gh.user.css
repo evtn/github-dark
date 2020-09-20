@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Github Dark
 @namespace      evtn
-@version        0.0.4-beta006
+@version        0.0.4-beta007
 @description    Github DarkFlat
 @author         vk.com/qevitta
 @homepageURL    https://github.com/evtn/github-dark
@@ -130,7 +130,8 @@
   .auth-form-body {
     background-color: var(--darker);
   }
-  table.files tr.navigation-focus td {
+  table.files tr.navigation-focus td,
+  .p-3 {
     background-color: var(--content);
   }
   table.files tr:hover td, 
@@ -244,8 +245,8 @@
   .listgroup,
   .SelectMenu-filter,
   .SelectMenu-footer,
-  .border,
-  .SelectMenu-message {
+  .SelectMenu-message,
+  .border {
     border: none !important;
   }
   .btn,
@@ -284,6 +285,9 @@
     background: var(--darker);
     margin-top: 10px;
     border-radius: 5px;
+  }
+  .pl-smi {
+    color: #4f91dd;
   }
   .pl-en,
   .pl-ent {
@@ -679,16 +683,23 @@
   }
   a.d-block + .p-3 {
     margin-top: -10px;
-  }
-  .p-3:not(.js-skip-to-content) {
-    background: var(--content);
+    border-radius: 10px !important;
     position: relative;
     z-index: 10;
-    border-radius: 10px;
   }
   article.rounded-1 {
     border-radius: 10px !important;
     overflow: hidden;
+    background-color: var(--hover) !important;
+  }
+  article.bg-white {
+    background-color: var(--hover) !important;
+  }
+  article > .p-3:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+  article > .p-3:first-child {
+    border-radius: 10px 10px 0 0;
   }
   h1 a,
   h2 a,
@@ -752,5 +763,9 @@
   }
   .SelectMenu-tab[aria-selected="true"] {
     border-color: var(--accent);
+  }
+  /* explore background fix */
+  main > .border-bottom {
+    background: var(--darker) !important;
   }
 }
